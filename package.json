@@ -9,18 +9,23 @@
     "build": "tsc",
     "build:watch": "tsc --watch",
     "type-check": "tsc --noEmit",
-    "lint": "eslint --fix .",
-    "format": "prettier --write .",
-    "prepare": "husky"
+    "lint": "vp lint --fix .",
+    "format": "vp fmt .",
+    "prepare": "vp config"
   },
   "devDependencies": {
     "@tsconfig/strictest": "^2.0.8",
-    "eslint": "^10.7.0",
-    "eslint-config-prettier": "^10.1.8",
-    "husky": "^9.1.7",
-    "lint-staged": "^17.2.0",
-    "prettier": "^3.9.6",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.65.0"
+    "vite-plus": "0.2.6"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "npm",
+      "version": "12.0.1",
+      "onFail": "download"
+    }
+  },
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@0.2.6"
   }
 }
