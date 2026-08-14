@@ -1,6 +1,11 @@
 import { defineConfig } from 'vite-plus';
 
 export default defineConfig({
+  pack: {
+    dts: true,
+    format: ['esm'],
+    sourcemap: true,
+  },
   lint: {
     plugins: ['oxc', 'typescript', 'unicorn'],
     categories: {

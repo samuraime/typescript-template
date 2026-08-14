@@ -3,16 +3,18 @@
   "version": "1.0.0",
   "description": "Template for TypeScript projects",
   "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsc",
-    "build:watch": "tsc --watch",
-    "type-check": "tsc --noEmit",
-    "lint": "vp lint --fix .",
-    "format": "vp fmt .",
-    "prepare": "vp config"
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.mjs"
+    }
   },
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "@tsconfig/strictest": "^2.0.8",
     "typescript": "^6.0.3",
