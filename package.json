@@ -18,13 +18,6 @@
     "typescript": "^6.0.3",
     "vite-plus": "0.2.6"
   },
-  "devEngines": {
-    "packageManager": {
-      "name": "npm",
-      "version": "12.0.1",
-      "onFail": "download"
-    }
-  },
   "overrides": {
     "vite": "npm:@voidzero-dev/vite-plus-core@0.2.6"
   }
